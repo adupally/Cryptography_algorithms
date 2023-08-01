@@ -8,7 +8,7 @@ Table of Contents
 
 Symmetric Cryptography
 1 Advanced Encryption Standard
-2 Data Encryption Standard
+2 Triple Data Encryption Standard
 
 Asymmetric Cryptography
 1 Rivest-Shamir-Adleman
@@ -43,5 +43,20 @@ we need to use padding for make the block size complete
 
 In ECB mode of operation we get the same cipher text every time we use same key and same plaintext so it's not used more
 In CBC mode of operation we get different cipher text every time even though we use samke key and plain text so it is used in wide range of applications
+
+Triple Data Encryption Standard (3DES)
+
+In Triple DES (3DES), each of the three keys is applied for 16 rounds of encryption in the process. This results in a total of 48 rounds of encryption when using three different keys.  
+Key size = 56bits 
+for implementing TDES we have three types for key represenattion
+1 : need have three different Keys 
+2: can have 2 different keys k1,k2,k1
+3:can use same three keys (not recommended)
+reprent in formula  ciphertext = E(K3, D(K2, E(K1, plaintext)))
+In TripleDES also we use modes of operation and modes of operations work asame as AES
+In TDES we use pycryptodome library 
+command to install libaray "pip install pycryptodome"
+
+
 
 
